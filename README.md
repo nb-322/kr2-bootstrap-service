@@ -24,6 +24,22 @@
 - сетка частых услуг `col-12 col-md-6 col-lg-4`;
 - подвал страницы на сетке.
 
+## Практическая работа 10
+
+Тема: «Страница на Bootstrap: компоненты».
+
+Выполнено:
+
+- добавлена единая Bootstrap-навигация с `dropdown` и кнопкой быстрой заявки на всех страницах;
+- создана страница каталога `catalog.html` с карточками услуг на компоненте `card`;
+- создана страница услуги `product.html` с хлебными крошками, вкладками и таблицей;
+- создана страница заявки `order.html` с формой на Bootstrap;
+- использованы компоненты `navbar`, `card`, `btn`, `badge`, `alert`, `modal`,
+  `form-control`, `form-select`, `input-group`, `form-check`, `accordion`, `dropdown`,
+  `nav-tabs`, `breadcrumb`, `table`;
+- добавлены изображения услуг в `images/`;
+- в `css/custom.css` добавлены `placeholder-image` и ограничение высоты `card-img-top`.
+
 ## Используемые технологии
 
 - HTML;
@@ -36,11 +52,13 @@
 
 ```text
 kr2-bootstrap-service/
-├── index.html
+├── index.html        главная: сетка, преимущества, частые услуги
+├── catalog.html      каталог услуг, карточки, частые вопросы
+├── product.html      страница услуги: вкладки, таблица, хлебные крошки
+├── order.html        форма заявки на ремонт
 ├── css/
 │   └── custom.css
 ├── images/
-│   └── hero.svg
 ├── README.md
 └── .gitignore
 ```

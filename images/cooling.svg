@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 310" role="img" aria-label="Чистка системы охлаждения">
+    <rect width="480" height="310" fill="#e8f6ee"/>
+    <circle cx="240" cy="155" r="96" fill="#198754"/><circle cx="240" cy="155" r="26" fill="#e8f6ee"/><path d="M240 59c40 20 40 56 0 76M336 155c-20 40-56 40-76 0M240 251c-40-20-40-56 0-76M144 155c20-40 56-40 76 0" fill="#e8f6ee" opacity="0.85"/>
+</svg>
