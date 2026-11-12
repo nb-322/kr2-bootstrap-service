@@ -1,7 +1,6 @@
 const forms = document.querySelectorAll('.js-form');
 const toastElement = document.getElementById('orderToast');
 const orderAlert = document.getElementById('orderAlert');
-const orderModalElement = document.getElementById('orderModal');
 
 forms.forEach((form) => {
     form.addEventListener('submit', (event) => {
@@ -21,10 +20,6 @@ forms.forEach((form) => {
 
         if (orderAlert && form.id === 'orderForm') {
             orderAlert.classList.remove('d-none');
-        }
-
-        if (orderModalElement && orderModalElement.contains(form)) {
-            bootstrap.Modal.getOrCreateInstance(orderModalElement).hide();
         }
     });
 
@@ -51,8 +46,9 @@ if (serviceSelect && esportsFields && ratingSelect && profileInput && esportsEst
         esportsEstimate.textContent = `Работы от ${price} ₽ · скидка ${discount}%`;
     };
 
-    if (new URLSearchParams(window.location.search).get('service') === 'esports') {
-        serviceSelect.value = 'esports';
+    const requestedService = new URLSearchParams(window.location.search).get('service');
+    if (Array.from(serviceSelect.options).some((option) => option.value === requestedService)) {
+        serviceSelect.value = requestedService;
     }
     serviceSelect.addEventListener('change', updateEsports);
     ratingSelect.addEventListener('change', updateEsports);

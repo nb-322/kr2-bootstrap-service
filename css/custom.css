@@ -19,3 +19,6 @@ body {
     background: #18283f;
     color: #fff;
 }
+
+.service-card { transition: box-shadow .15s ease; }
+.service-card:hover, .service-card:focus-within { box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important; }

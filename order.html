@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Форма заявки на ремонт техники: услуга, устройство и способ передачи.">
-    <title>Заявка на ремонт - ФиксЛаб</title>
+    <title>Заявка на ремонт - MR CYBORG</title>
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-light">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.html">ФиксЛаб</a>
+        <a class="navbar-brand" href="index.html">MR CYBORG</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
                 aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
             <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,6 @@
             <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="catalog.html">Услуги</a></li>
-                <li class="nav-item"><a class="nav-link" href="product.html">Услуга</a></li>
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Заявка</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,11 +31,7 @@
                         <li><a class="dropdown-item" href="catalog.html#faq">Частые вопросы</a></li>
                     </ul>
                 </li>
-                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                    <button class="btn btn-primary w-100" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
-                        Быстрая заявка
-                    </button>
-                </li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-primary w-100" href="order.html">Оставить заявку</a></li>
             </ul>
         </div>
     </div>
@@ -83,12 +78,12 @@
                             <label class="form-label" for="order-service">Услуга *</label>
                             <select class="form-select" id="order-service" name="service" required>
                                 <option value="" selected disabled>Выберите услугу</option>
-                                <option>Замена экрана смартфона</option>
-                                <option>Чистка и замена термопасты</option>
-                                <option>Восстановление данных</option>
-                                <option>Ремонт материнской платы</option>
-                                <option>Замена аккумулятора</option>
-                                <option>Установка системы и программ</option>
+                                <option value="screen">Замена экрана смартфона</option>
+                                <option value="cooling">Чистка и замена термопасты</option>
+                                <option value="data">Восстановление данных</option>
+                                <option value="motherboard">Ремонт материнской платы</option>
+                                <option value="battery">Замена аккумулятора</option>
+                                <option value="software">Установка системы и программ</option>
                                 <option value="esports">Анализ и апгрейд ПК для киберспорта</option>
                             </select>
                             <div class="invalid-feedback">Выберите услугу из списка.</div>
@@ -151,7 +146,7 @@
     <div class="container">
         <div class="row align-items-center g-3">
             <div class="col-12 col-md-6">
-                <p class="mb-0">&copy; 2026 ФиксЛаб.</p>
+                <p class="mb-0">&copy; 2026 MR CYBORG.</p>
             </div>
             <div class="col-12 col-md-6 text-md-end">
                 <a class="text-white text-decoration-none me-3" href="catalog.html">Услуги</a>
@@ -160,54 +155,6 @@
         </div>
     </div>
 </footer>
-
-<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-muted">Оставьте контакты, мастер перезвонит и уточнит поломку.</p>
-                <form class="needs-validation js-form" id="modalForm" novalidate>
-                    <div class="mb-3">
-                        <label class="form-label" for="modal-name">Имя</label>
-                        <input class="form-control" id="modal-name" name="name" type="text" minlength="2" required>
-                        <div class="invalid-feedback">Введите имя, минимум два символа.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="modal-phone">Телефон</label>
-                        <div class="input-group has-validation">
-                            <span class="input-group-text">+7</span>
-                            <input class="form-control" id="modal-phone" name="phone" type="tel"
-                                   inputmode="numeric" pattern="\d{3} \d{3}-\d{2}-\d{2}" placeholder="900 000-00-00" required>
-                            <div class="invalid-feedback">Формат: 900 000-00-00</div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="modal-device">Устройство</label>
-                        <select class="form-select" id="modal-device" name="device">
-                            <option selected>Выберите устройство</option>
-                            <option>Ноутбук</option>
-                            <option>Смартфон</option>
-                            <option>Компьютер</option>
-                        </select>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" id="modal-agree" name="agreement" type="checkbox" required>
-                        <label class="form-check-label" for="modal-agree">Согласен на обработку данных</label>
-                        <div class="invalid-feedback">Без согласия заявку отправить нельзя.</div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Закрыть</button>
-                <button class="btn btn-primary" type="submit" form="modalForm">Отправить</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div class="toast align-items-center text-bg-success border-0" id="orderToast" role="alert" aria-live="assertive" aria-atomic="true">
