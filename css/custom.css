@@ -71,7 +71,7 @@ main > section { margin-bottom: 5rem !important; }
 .card-body { padding: 1.5rem; }
 .card-title { line-height: 1.3; font-size: 1.2rem; }
 .card-text { font-size: .92rem; }
-.card-img-top { height: 180px; object-fit: cover; border-bottom: 1px solid var(--line); }
+.card-img-top { height: 210px; object-fit: contain; background: #111b27; border-bottom: 1px solid var(--line); }
 .service-card { transition: border-color .18s, transform .18s; }
 .service-card:hover, .service-card:focus-within { border-color: var(--blue); transform: translateY(-2px); box-shadow: 0 0 24px #66ceff12 !important; }
 .service-card .fw-bold { color: var(--blue); }
@@ -192,4 +192,4 @@ footer a:hover { color: #fff !important; }
 @media (max-width: 1199px) { .navbar-collapse { padding: 1rem 0 .25rem; } .navbar-nav .nav-link.active { box-shadow: none; color: var(--blue) !important; } }
 @media (max-width: 575px) { .category-card { padding: 1.5rem; } }
 
-.phone-catalog .card-img-top { object-fit: contain; background: #111b28; }
+.phone-catalog .card-img-top { height: 240px; }
