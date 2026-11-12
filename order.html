@@ -89,8 +89,27 @@
                                 <option>Ремонт материнской платы</option>
                                 <option>Замена аккумулятора</option>
                                 <option>Установка системы и программ</option>
+                                <option value="esports">Анализ и апгрейд ПК для киберспорта</option>
                             </select>
                             <div class="invalid-feedback">Выберите услугу из списка.</div>
+                        </div>
+                        <div class="col-12" id="esports-fields" hidden>
+                            <fieldset class="border rounded p-3">
+                                <legend class="float-none w-auto px-2 fs-6">Подготовка ПК к киберспорту</legend>
+                                <p class="small text-muted">Проверим FPS и температуры, подберём апгрейд и сравним результаты до и после настройки.</p>
+                                <label class="form-label" for="order-rating">Уровень FACEIT</label>
+                                <select class="form-select mb-3" id="order-rating" name="rating" disabled aria-describedby="esports-estimate esports-terms">
+                                    <option value="0">Без рейтинга — без скидки</option>
+                                    <option value="5">Уровень 1–3 — скидка 5%</option>
+                                    <option value="10">Уровень 4–6 — скидка 10%</option>
+                                    <option value="15">Уровень 7–9 — скидка 15%</option>
+                                    <option value="20">Уровень 10 — скидка 20%</option>
+                                </select>
+                                <label class="form-label" for="order-profile">Ссылка на профиль FACEIT</label>
+                                <input class="form-control mb-3" id="order-profile" name="profile" type="url" placeholder="https://www.faceit.com/…" disabled>
+                                <p class="fw-bold mb-2" id="esports-estimate" role="status" aria-live="polite">Работы от 4 000 ₽ · скидка 0%</p>
+                                <p class="small text-muted mb-0" id="esports-terms">Предварительный расчёт. Скидка на работы предоставляется после подтверждения уровня по профилю. Комплектующие оплачиваются отдельно; итоговую смету согласуем после диагностики.</p>
+                            </fieldset>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="order-device">Устройство</label>
@@ -106,9 +125,9 @@
                             </select>
                         </div>
                         <div class="col-12">
-                            <label class="form-label" for="order-comment">Что случилось</label>
+                            <label class="form-label" for="order-comment">Описание задачи</label>
                             <textarea class="form-control" id="order-comment" name="comment" rows="4"
-                                      placeholder="Опишите поломку: когда появилась, что уже пробовали"></textarea>
+                                      placeholder="Опишите поломку или укажите игру, желаемый FPS, конфигурацию ПК и бюджет на апгрейд"></textarea>
                         </div>
                         <div class="col-12">
                             <div class="form-check">

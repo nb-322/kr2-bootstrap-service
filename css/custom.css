@@ -14,3 +14,8 @@ body {
     height: 180px;
     object-fit: cover;
 }
+
+.esports-panel {
+    background: #18283f;
+    color: #fff;
+}
