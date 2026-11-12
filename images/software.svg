@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 310" role="img" aria-label="Установка программ">
-    <rect width="480" height="310" fill="#101c30"/>
-    <rect x="120" y="70" width="240" height="170" rx="16" fill="#738dff"/><rect x="140" y="92" width="200" height="126" rx="8" fill="#101c30"/><path d="M175 130l-25 25 25 25M305 130l25 25-25 25M265 118l-50 74" stroke="#738dff" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect width="480" height="310" fill="#111d2c"/>
+    <rect x="120" y="70" width="240" height="170" rx="16" fill="#738dff"/><rect x="140" y="92" width="200" height="126" rx="8" fill="#111d2c"/><path d="M175 130l-25 25 25 25M305 130l25 25-25 25M265 118l-50 74" stroke="#738dff" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
