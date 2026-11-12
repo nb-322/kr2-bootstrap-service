@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MR CYBORG - сервис ремонта ноутбуков, телефонов и компьютеров в Москве. Диагностика бесплатно.">
     <title>Главная - MR CYBORG, сервис ремонта техники</title>
+    <script src="js/theme.js?v=20261112-features"></script>
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css?v=20261112-11">
+    <link rel="stylesheet" href="css/features.css?v=20261112-features">
+    <script src="js/features.js?v=20261112-features" defer></script>
+    <script src="js/terminal.js?v=20261112-terminal" defer></script>
 </head>
 <body data-bs-theme="dark"><a class="skip-link" href="#main-content">Перейти к содержимому</a>
 
@@ -34,14 +38,26 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <div class="repair-terminal" aria-hidden="true">
+                <div class="repair-terminal" aria-label="Интерактивный терминал MR CYBORG">
                     <div class="terminal-toolbar"><span class="terminal-dots"><i></i><i></i><i></i></span><span>mr-cyborg / repair</span><span>⌘</span></div>
-                    <div class="terminal-content">
+                    <div class="terminal-content" id="terminal-home">
                         <p class="terminal-command"><span>~</span> ./bring-it-back</p>
                         <div class="terminal-line"><span>01</span><p>Диагностика<span class="terminal-comment">Находим причину</span></p></div>
                         <div class="terminal-line"><span>02</span><p>Ремонт<span class="terminal-comment">Возвращаем в строй</span></p></div>
                         <div class="terminal-line"><span>03</span><p>Апгрейд<span class="terminal-comment">Раскрываем потенциал</span></p></div>
-                        <p class="terminal-prompt"><span>↳</span> Техника снова на вашей стороне<span class="terminal-cursor">_</span></p>
+                    </div>
+                    <div class="terminal-stage" id="terminal-stage" hidden>
+                        <canvas id="terminal-canvas" aria-label="Анимация терминала"></canvas>
+                        <span class="terminal-mode" id="terminal-mode"></span>
+                        <button class="terminal-stop" id="terminal-stop" type="button">Остановить ×</button>
+                    </div>
+                    <div class="terminal-console">
+                        <p class="terminal-output" id="terminal-output" role="status">Введи cmatrix или lava и нажми Enter. Все команды: help.</p>
+                        <form class="terminal-form" id="terminal-form" autocomplete="off">
+                            <label class="terminal-shell" for="terminal-input">cyborg:~$</label>
+                            <input id="terminal-input" class="terminal-input" type="text" placeholder="help" aria-label="Команда терминала" maxlength="80" spellcheck="false" autocapitalize="off" autocorrect="off">
+                            <button class="terminal-enter" type="submit" aria-label="Выполнить команду">↵</button>
+                        </form>
                     </div>
                 </div>
             </div>
