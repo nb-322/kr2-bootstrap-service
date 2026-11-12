@@ -180,3 +180,16 @@ footer a:hover { color: #fff !important; }
     .map-caption { padding: 1rem; font-size: .6rem; }
     .site-footer .footer-brand { margin-bottom: 0; }
 }
+
+.category-card { display: flex; flex-direction: column; height: 100%; padding: 2rem; color: var(--text); text-decoration: none; background: linear-gradient(135deg, #111b27, #0e131d); border: 1px solid var(--line); border-radius: 12px; transition: border-color .2s, box-shadow .2s; }
+.category-card:hover, .category-card:focus-visible { border-color: #4d8ba8; color: var(--text); box-shadow: 0 0 25px #66ceff12; }
+.category-card h2 { font-size: clamp(1.5rem, 2.7vw, 2rem); margin-bottom: 1.2rem; }
+.category-card p { font-size: .95rem; }
+.category-link { margin-top: auto; padding-top: 1rem; color: #a6dff4; font-size: .9rem; }
+.category-switch { display: flex; flex-wrap: wrap; gap: .5rem; }
+.category-switch a { text-decoration: none; padding: .6rem 1rem; color: var(--muted); border: 1px solid var(--line); border-radius: 8px; font-size: .85rem; }
+.category-switch a[aria-current="page"] { background: #102636; border-color: #4389aa; color: #bcecff; }
+@media (max-width: 1199px) { .navbar-collapse { padding: 1rem 0 .25rem; } .navbar-nav .nav-link.active { box-shadow: none; color: var(--blue) !important; } }
+@media (max-width: 575px) { .category-card { padding: 1.5rem; } }
+
+.phone-catalog .card-img-top { object-fit: contain; background: #111b28; }
