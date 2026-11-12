@@ -38,6 +38,7 @@ kr2-bootstrap-service/
 ├── product.html      переход на service-screen.html
 ├── service-*.html    семь страниц услуг
 ├── order.html        форма заявки на ремонт
+├── contacts.html     контакты, график работы и Яндекс Карты
 ├── css/
 │   └── custom.css
 ├── js/
