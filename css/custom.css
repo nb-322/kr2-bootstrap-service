@@ -226,3 +226,9 @@ main > section { margin-bottom: 5rem !important; }
 .footer-address { align-items: flex-start; }
 .footer-address .footer-icon { margin-top: .2rem; }
 @media (max-width: 991px) { .footer-icon-link { justify-content: flex-start; } }
+
+.home-breadcrumbs { padding-top: 1.5rem; }
+.home-breadcrumbs .breadcrumb { margin-bottom: 0; }
+.home-breadcrumbs + .hero-section { padding-top: 3rem; }
+.site-footer .footer-email { margin-top: 1rem; margin-bottom: 0; }
+@media (max-width: 575px) { .home-breadcrumbs + .hero-section { padding-top: 2rem; } }
