@@ -6,38 +6,23 @@
     <meta name="description" content="Форма заявки на ремонт техники: услуга, устройство и способ передачи.">
     <title>Заявка на ремонт - MR CYBORG</title>
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/custom.css?v=20261112-3">
 </head>
-<body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body data-bs-theme="dark"><a class="skip-link" href="#main-content">Перейти к содержимому</a>
+<nav class="navbar navbar-expand-lg navbar-dark" aria-label="Основное меню">
     <div class="container">
-        <a class="navbar-brand" href="index.html">MR CYBORG</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav ms-auto align-items-lg-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="catalog.html">Услуги</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Заявка</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Дополнительно
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="catalog.html">Все услуги</a></li>
-                        <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-                        <li><a class="dropdown-item" href="catalog.html#faq">Частые вопросы</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn btn-primary w-100" href="order.html">Оставить заявку</a></li>
-            </ul>
-        </div>
+        <a class="navbar-brand" href="index.html?v=20261112-3"><span class="brand-mark" aria-hidden="true">[M]</span> MR CYBORG<span class="brand-dot" aria-hidden="true">_</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNavbar"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3"><li class="nav-item"><a class="nav-link" href="index.html?v=20261112-3">Главная</a></li>
+<li class="nav-item"><a class="nav-link" href="catalog.html?v=20261112-3">Услуги</a></li>
+<li class="nav-item"><a class="nav-link" href="catalog.html?v=20261112-3#faq">Вопросы</a></li>
+
+            <li class="nav-item ms-lg-3 my-2 my-lg-0"><a class="btn btn-primary w-100" aria-current="page" href="order.html?v=20261112-3">Оставить заявку <span aria-hidden="true">↗</span></a></li>
+        </ul></div>
     </div>
 </nav>
 
-<main class="container my-5">
+<main class="container page-content my-5" id="main-content">
     <div class="row justify-content-center">
         <div class="col-12 col-lg-8">
             <div class="card shadow-sm">
@@ -46,32 +31,32 @@
                 </div>
                 <div class="card-body">
                     <div class="alert alert-info" role="alert">
-                        Заполните форму. Поля со звёздочкой обязательные.
+                        Опишите задачу — подготовим файл заявки с выбранной услугой. Поля со звёздочкой обязательные.
                     </div>
 
                     <div class="alert alert-success d-none" role="alert" id="orderAlert">
-                        Заявка принята. Мастер перезвонит в течение рабочего дня.
+                        Файл заявки подготовлен. Передайте его сервису для согласования работ.
                     </div>
 
                     <form class="row g-3 needs-validation js-form" id="orderForm" novalidate>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="order-name">Имя *</label>
-                            <input class="form-control" id="order-name" name="name" type="text" minlength="2" required>
+                            <input class="form-control" id="order-name" name="name" type="text" minlength="2" autocomplete="name" required>
                             <div class="invalid-feedback">Введите имя, минимум два символа.</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="order-email">E-mail *</label>
-                            <input class="form-control" id="order-email" name="email" type="email" placeholder="example@mail.ru" required>
+                            <input class="form-control" id="order-email" name="email" type="email" autocomplete="email" placeholder="example@mail.ru" required>
                             <div class="invalid-feedback">Проверьте адрес, нужен формат example@mail.ru.</div>
                         </div>
                         <div class="col-12 col-md-6">
                             <label class="form-label" for="order-phone">Телефон *</label>
                             <div class="input-group">
                                 <span class="input-group-text">+7</span>
-                                <input class="form-control" id="order-phone" name="phone" type="tel"
-                                       inputmode="numeric" pattern="\d{3} \d{3}-\d{2}-\d{2}"
+                                <input class="form-control" id="order-phone" name="phone" maxlength="20" type="tel"
+                                       autocomplete="tel-national" inputmode="tel"
                                        placeholder="900 000-00-00" required>
-                                <div class="invalid-feedback">Формат: 900 000-00-00</div>
+                                <div class="invalid-feedback">Введите 10 цифр номера, например 900 000-00-00.</div>
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
@@ -101,7 +86,7 @@
                                     <option value="20">Уровень 10 — скидка 20%</option>
                                 </select>
                                 <label class="form-label" for="order-profile">Ссылка на профиль FACEIT</label>
-                                <input class="form-control mb-3" id="order-profile" name="profile" type="url" placeholder="https://www.faceit.com/…" disabled>
+                                <div class="mb-3"><input class="form-control" id="order-profile" name="profile" type="url" placeholder="https://www.faceit.com/en/players/…" disabled><div class="invalid-feedback">Укажите ссылку на профиль игрока FACEIT.</div></div>
                                 <p class="fw-bold mb-2" id="esports-estimate" role="status" aria-live="polite">Работы от 4 000 ₽ · скидка 0%</p>
                                 <p class="small text-muted mb-0" id="esports-terms">Предварительный расчёт. Скидка на работы предоставляется после подтверждения уровня по профилю. Комплектующие оплачиваются отдельно; итоговую смету согласуем после диагностики.</p>
                             </fieldset>
@@ -132,10 +117,11 @@
                             </div>
                         </div>
                         <div class="col-12 d-grid gap-2 d-sm-flex">
-                            <button class="btn btn-primary btn-lg" type="submit">Отправить заявку</button>
+                            <button class="btn btn-primary btn-lg" type="submit">Скачать заявку</button>
                             <button class="btn btn-outline-secondary btn-lg" type="reset">Очистить</button>
                         </div>
                     </form>
+                    <p class="small text-muted mt-3 mb-0">Файл скачивается на ваше устройство. Онлайн-отправка в сервис пока недоступна.</p>
                 </div>
             </div>
         </div>
@@ -146,26 +132,17 @@
     <div class="container">
         <div class="row align-items-center g-3">
             <div class="col-12 col-md-6">
-                <p class="mb-0">&copy; 2026 MR CYBORG.</p>
+                <p class="footer-brand">MR CYBORG<span aria-hidden="true">_</span></p><p class="small text-muted mb-0">Ремонт и апгрейд техники / Москва<br>&copy; 2026 MR CYBORG</p>
             </div>
             <div class="col-12 col-md-6 text-md-end">
-                <a class="text-white text-decoration-none me-3" href="catalog.html">Услуги</a>
-                <a class="text-white text-decoration-none" href="order.html">Заявка</a>
+                <a class="text-white text-decoration-none me-3" href="catalog.html?v=20261112-3">Услуги</a>
+                <a class="text-white text-decoration-none" href="order.html?v=20261112-3">Заявка</a>
             </div>
         </div>
     </div>
 </footer>
 
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div class="toast align-items-center text-bg-success border-0" id="orderToast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex">
-            <div class="toast-body">Заявка отправлена, мастер перезвонит в рабочее время.</div>
-            <button class="btn-close btn-close-white me-2 m-auto" type="button" data-bs-dismiss="toast" aria-label="Закрыть"></button>
-        </div>
-    </div>
-</div>
-
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20261112-3"></script>
 </body>
 </html>
