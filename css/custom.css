@@ -219,3 +219,10 @@ main > section { margin-bottom: 5rem !important; }
     .footer-schedule { font-size: .75rem; }
     .footer-uptime-label { display: inline-block; }
 }
+
+.footer-icon-link { display: flex; align-items: center; justify-content: center; gap: .5rem; }
+.footer-icon { flex: 0 0 17px; color: #86bdd4; }
+.footer-email span { min-width: 0; overflow-wrap: anywhere; }
+.footer-address { align-items: flex-start; }
+.footer-address .footer-icon { margin-top: .2rem; }
+@media (max-width: 991px) { .footer-icon-link { justify-content: flex-start; } }
